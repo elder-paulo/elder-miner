@@ -1,3 +1,28 @@
+# ************************* SSH *********************************************************************************************
+sudo apt install openssh-server
+sudo systemctl status ssh
+
+#******** Setup Firewall - Ubuntu
+sudo ufw allow ssh
+
+# To determine the PUBLIC IP address of the machine you’re trying to SSH to, simply visit the following URL: https://ifconfig.co/ip.
+
+# When it comes to setting up PORT FORWARDING each router has a different way to setup port forwarding. You should consult 
+# your router documentation about how to set up port forwarding. In short, you need to enter the port number where requests
+# will be made (Default SSH port is 22) and the private IP address you found earlier (using the ip a command) of the machine
+# where the SSH is running.
+
+# Once you’ve found the IP address, and configured your router you can log in by typing:
+# ssh username@public_ip_address
+
+# Stop ssh
+sudo systemctl stop ssh
+sudo systemctl status ssh
+***************************************************************************************************************************#
+
+
+
+
 apt-get update
 
    sudo freshclam
