@@ -25,12 +25,10 @@
         "enabled": true,
         "huge-pages": true,
         "hw-aes": null,
-        "priority": 5,
+        "priority": null,
         "memory-pool": false,
         "yield": true,
         "asm": true,
-        "argon2-impl": null,
-        "argon2": [0, 8, 1, 9, 2, 10, 3, 11, 4, 12, 5, 13, 6, 14, 7, 15],
         "cn": [
             [1, 0],
             [1, 1],
@@ -84,55 +82,111 @@
             [2, 15]
         ],
         "cn/gpu": [0, 8, 1, 9, 2, 10, 3, 11, 4, 12, 5, 13, 6, 14, 7, 15],
+        "defyx": [0, 8, 1, 9, 2, 10, 3, 11, 4, 12, 5, 13, 6, 14, 7, 15],
         "rx": [0, 1, 2, 3, 4, 5, 6, 7],
         "rx/wow": [0, 8, 1, 9, 2, 10, 3, 11, 4, 12, 5, 13, 6, 14, 7, 15],
         "cn/0": false,
         "cn-lite/0": false,
-        "rx/arq": "rx/wow"
+        "rx/arq": "rx/wow",
+        "rx/keva": "rx/wow"
     },
     "opencl": {
         "enabled": false,
         "cache": true,
         "loader": null,
-        "platform": "AMD"
-    },
-    "cuda": {
-        "enabled": false,
-        "loader": null,
-        "nvml": true
+        "platform": "AMD",
+        "adl": true,
+        "cn": [
+            {
+                "index": 0,
+                "intensity": 864,
+                "worksize": 8,
+                "strided_index": [1, 2],
+                "threads": [-1, -1],
+                "unroll": 8
+            }
+        ],
+        "cn-heavy": [
+            {
+                "index": 0,
+                "intensity": 864,
+                "worksize": 8,
+                "strided_index": [1, 2],
+                "threads": [-1, -1],
+                "unroll": 8
+            }
+        ],
+        "cn-lite": [
+            {
+                "index": 0,
+                "intensity": 1872,
+                "worksize": 8,
+                "strided_index": [1, 2],
+                "threads": [-1, -1],
+                "unroll": 8
+            }
+        ],
+        "cn-pico": [
+            {
+                "index": 0,
+                "intensity": 1872,
+                "worksize": 8,
+                "strided_index": [2, 2],
+                "threads": [-1, -1],
+                "unroll": 8
+            }
+        ],
+        "cn/2": [
+            {
+                "index": 0,
+                "intensity": 864,
+                "worksize": 8,
+                "strided_index": [2, 2],
+                "threads": [-1, -1],
+                "unroll": 8
+            }
+        ],
+        "cn/gpu": [
+            {
+                "index": 0,
+                "intensity": 864,
+                "worksize": 8,
+                "threads": [-1, -1],
+                "unroll": 1
+            }
+        ],
+        "rx": [
+            {
+                "index": 0,
+                "intensity": 1152,
+                "worksize": 8,
+                "threads": [-1, -1],
+                "bfactor": 6,
+                "gcn_asm": true,
+                "dataset_host": false
+            }
+        ],
+        "cn/0": false,
+        "cn-lite/0": false
     },
     "donate-level": 1,
     "donate-over-proxy": 0,
     "log-file": null,
     "pools": [
         {
-            "algo": "rx/0",
-            "coin": "monero",
-            "url": "gulf.moneroocean.stream:10016",
-            "user": "49HdBzfT2rAjbNnkSbS3vYNF4QKuUzJPeeKBiCwrmuAJJXd6w9snrR1BaUHUzALU6s2NT2rapMCvqQ5LWhi2aSHDCRrwH6g",
-            "pass": "x",
-            "rig-id": "Alpine-CPU",
+            "algo": "rx/wow",
+            "coin": "arqma",
+            "url": "hk.arqma.herominers.com:10642",
+            "user": "solo:ar3hMJLu3opTEYEm29KseWdBRtTnhq2GeTGb81PfGNgXCMiFbmsR7uVdaac69qocPDFZoCQYrcmGDQurUoPFhaeM3BqAc58Xh",
+            "pass": "eps-rig",
+            "rig-id": null,
             "nicehash": false,
             "keepalive": true,
             "enabled": true,
             "tls": false,
             "tls-fingerprint": null,
             "daemon": false,
-            "self-select": null
-        },
- {
-            "algo": "rx/0",
-            "coin": "monero",
-            "url": "supportXMR.com:5555",
-            "user": "49HdBzfT2rAjbNnkSbS3vYNF4QKuUzJPeeKBiCwrmuAJJXd6w9snrR1BaUHUzALU6s2NT2rapMCvqQ5LWhi2aSHDCRrwH6g",
-            "pass": "x",
-            "rig-id": "Alpine-CPU",
-            "nicehash": false,
-            "keepalive": true,
-            "enabled": true,
-            "tls": false,
-            "tls-fingerprint": null,
-            "daemon": false,
+            "socks5": null,
             "self-select": null
         }
     ],
@@ -143,5 +197,33 @@
     "syslog": false,
     "user-agent": null,
     "verbose": 0,
-    "watch": true
+    "watch": true,
+    "algo-perf": {
+        "cn/1": 548.4708862304688,
+        "cn/2": 548.4708862304688,
+        "cn/r": 548.4708862304688,
+        "cn/fast": 1096.9417724609376,
+        "cn/half": 1096.9417724609376,
+        "cn/xao": 548.4708862304688,
+        "cn/rto": 548.4708862304688,
+        "cn/rwz": 731.2945556640625,
+        "cn/zls": 731.2945556640625,
+        "cn/double": 274.2354431152344,
+        "cn/gpu": 95.06690216064453,
+        "cn-lite/1": 2099.580078125,
+        "cn-heavy/0": 195.0074920654297,
+        "cn-heavy/tube": 195.0074920654297,
+        "cn-heavy/xhv": 195.0074920654297,
+        "cn-pico": 10893.0107421875,
+        "cn-pico/tlo": 0.0,
+        "rx/0": 4682.7587890625,
+        "rx/wow": 6048.79541015625,
+        "rx/loki": 4682.7587890625,
+        "defyx": 2562.375,
+        "rx/arq": 26494.44921875,
+        "rx/sfx": 0.0,
+        "rx/keva": 0.0
+    },
+    "rebench-algo": false,
+    "bench-algo-time": 10
 }
