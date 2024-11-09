@@ -7,7 +7,7 @@
     "pools": [
         {
             "url": "gulf.moneroocean.stream:10128",
-            "user": "49HdBzfT2rAjbNnkSbS3vYNF4QKuUzJPeeKBiCwrmuAJJXd6w9snrR1BaUHUzALU6s2NT2rapMCvqQ5LWhi2aSHDCRrwH6g",
+            "user": "48XuoPqgUKVTQnJndgnfcXcurRkzPJwBai4DkNYd2Jps8fJ9Q1KvHVjNpEQonAAhrgP8iksHGuN9zHQoJg4U5G1n1PHtgpu",
             "pass": "eps-rig",
             "keepalive": true,
             "tls": true
